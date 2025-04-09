@@ -20,7 +20,7 @@
         <p id="selected-service"></p>
         <p id="selected-price"></p>
         <p id="selected-duration"></p>
-        <button class="change-btn" onclick="changeSelection()">Cambiar selección</button>
+        <button class="change-btn" id="changeSelection">Cambiar selección</button>
     </div>
     <div class="calendar-container">
         <div class="calendar-header">       
@@ -47,12 +47,13 @@
                 <label for="phone">Número Celular:</label>
                 <input type="tel" id="phone" name="phone" required pattern="^[0-9]{9}$" placeholder="Número celular (9 dígitos)" />
                 
+                <div id="resumenCita"></div>
                 <div class="popup-buttons">
                     <button type="button" id="payButton">Ir a Pagar</button>
                     <button type="button" id="whatsappButton">Contactar por WhatsApp</button>
                     <button id="closePopup" class="close-popup">Cerrar</button>
                 </div>
-            </form>
+            </form> 
         </div>
     </div>
 
@@ -62,5 +63,12 @@
     <script src="/js/firebaseConfig.js"></script>
 
     <script src="/js/reserva.js"></script>
+
+    <script>
+        document.getElementById("changeSelection").addEventListener("click", function() {
+            window.location.href = "seleccion.html"; 
+        });
+    </script>
+
     </body>
 </html>

@@ -1,0 +1,1814 @@
+Listado de rutas de carpetas para el volumen Nuevo vol
+El número de serie del volumen es 4EBC-FFAC
+D:.
+¦   Diagrama_de_Casos_de_Uso.pdf
+¦   Diagrama_de_Clases.pdf
+¦   Diagrama_de_Secuencia.pdf
+¦   Especificaci_on_de_Requerimientos_del_Software__ERS_.pdf
+¦   estructura_archivos.txt
+¦   Flores_Gustavo_Tarea_1.docx.docx
+¦   README.md
+¦   
++---css
+¦       main.css
+¦       reserva.css
+¦       seleccion.css
+¦       
++---hmtl
+¦       cancel.html
+¦       main.html
+¦       pago.html
+¦       reserva.html
+¦       seleccion.html
+¦       success.html
+¦       
++---imgs
+¦       1.jpeg
+¦       10.jpeg
+¦       11.jpeg
+¦       12.jpeg
+¦       2.jpeg
+¦       3.jpeg
+¦       4.jpeg
+¦       5.jpeg
+¦       6.jpeg
+¦       7.jpeg
+¦       8.jpeg
+¦       9.jpeg
+¦       fondo.jpg
+¦       logo.png
+¦       logoos.png
+¦       
++---js
+¦       firebaseConfig.js
+¦       main.js
+¦       reserva.js
+¦       seleccion.js
+¦       
++---stripe-backend
+    ¦   package-lock.json
+    ¦   package.json
+    ¦   server.js
+    ¦   
+    +---node_modules
+        ¦   .package-lock.json
+        ¦   
+        +---@types
+        ¦   +---node
+        ¦       ¦   assert.d.ts
+        ¦       ¦   async_hooks.d.ts
+        ¦       ¦   buffer.buffer.d.ts
+        ¦       ¦   buffer.d.ts
+        ¦       ¦   child_process.d.ts
+        ¦       ¦   cluster.d.ts
+        ¦       ¦   console.d.ts
+        ¦       ¦   constants.d.ts
+        ¦       ¦   crypto.d.ts
+        ¦       ¦   dgram.d.ts
+        ¦       ¦   diagnostics_channel.d.ts
+        ¦       ¦   dns.d.ts
+        ¦       ¦   dom-events.d.ts
+        ¦       ¦   domain.d.ts
+        ¦       ¦   events.d.ts
+        ¦       ¦   fs.d.ts
+        ¦       ¦   globals.d.ts
+        ¦       ¦   globals.typedarray.d.ts
+        ¦       ¦   http.d.ts
+        ¦       ¦   http2.d.ts
+        ¦       ¦   https.d.ts
+        ¦       ¦   index.d.ts
+        ¦       ¦   inspector.d.ts
+        ¦       ¦   LICENSE
+        ¦       ¦   module.d.ts
+        ¦       ¦   net.d.ts
+        ¦       ¦   os.d.ts
+        ¦       ¦   package.json
+        ¦       ¦   path.d.ts
+        ¦       ¦   perf_hooks.d.ts
+        ¦       ¦   process.d.ts
+        ¦       ¦   punycode.d.ts
+        ¦       ¦   querystring.d.ts
+        ¦       ¦   readline.d.ts
+        ¦       ¦   README.md
+        ¦       ¦   repl.d.ts
+        ¦       ¦   sea.d.ts
+        ¦       ¦   sqlite.d.ts
+        ¦       ¦   stream.d.ts
+        ¦       ¦   string_decoder.d.ts
+        ¦       ¦   test.d.ts
+        ¦       ¦   timers.d.ts
+        ¦       ¦   tls.d.ts
+        ¦       ¦   trace_events.d.ts
+        ¦       ¦   tty.d.ts
+        ¦       ¦   url.d.ts
+        ¦       ¦   util.d.ts
+        ¦       ¦   v8.d.ts
+        ¦       ¦   vm.d.ts
+        ¦       ¦   wasi.d.ts
+        ¦       ¦   worker_threads.d.ts
+        ¦       ¦   zlib.d.ts
+        ¦       ¦   
+        ¦       +---assert
+        ¦       ¦       strict.d.ts
+        ¦       ¦       
+        ¦       +---compatibility
+        ¦       ¦       disposable.d.ts
+        ¦       ¦       index.d.ts
+        ¦       ¦       indexable.d.ts
+        ¦       ¦       iterators.d.ts
+        ¦       ¦       
+        ¦       +---dns
+        ¦       ¦       promises.d.ts
+        ¦       ¦       
+        ¦       +---fs
+        ¦       ¦       promises.d.ts
+        ¦       ¦       
+        ¦       +---readline
+        ¦       ¦       promises.d.ts
+        ¦       ¦       
+        ¦       +---stream
+        ¦       ¦       consumers.d.ts
+        ¦       ¦       promises.d.ts
+        ¦       ¦       web.d.ts
+        ¦       ¦       
+        ¦       +---timers
+        ¦       ¦       promises.d.ts
+        ¦       ¦       
+        ¦       +---ts5.6
+        ¦               buffer.buffer.d.ts
+        ¦               globals.typedarray.d.ts
+        ¦               index.d.ts
+        ¦               
+        +---accepts
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---body-parser
+        ¦   ¦   HISTORY.md
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   
+        ¦   +---lib
+        ¦       ¦   read.js
+        ¦       ¦   utils.js
+        ¦       ¦   
+        ¦       +---types
+        ¦               json.js
+        ¦               raw.js
+        ¦               text.js
+        ¦               urlencoded.js
+        ¦               
+        +---bytes
+        ¦       History.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       Readme.md
+        ¦       
+        +---call-bind-apply-helpers
+        ¦   ¦   .eslintrc
+        ¦   ¦   .nycrc
+        ¦   ¦   actualApply.d.ts
+        ¦   ¦   actualApply.js
+        ¦   ¦   applyBind.d.ts
+        ¦   ¦   applyBind.js
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   functionApply.d.ts
+        ¦   ¦   functionApply.js
+        ¦   ¦   functionCall.d.ts
+        ¦   ¦   functionCall.js
+        ¦   ¦   index.d.ts
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   reflectApply.d.ts
+        ¦   ¦   reflectApply.js
+        ¦   ¦   tsconfig.json
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---test
+        ¦           index.js
+        ¦           
+        +---call-bound
+        ¦   ¦   .eslintrc
+        ¦   ¦   .nycrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   index.d.ts
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   tsconfig.json
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---test
+        ¦           index.js
+        ¦           
+        +---content-disposition
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---content-type
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---cookie
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       SECURITY.md
+        ¦       
+        +---cookie-signature
+        ¦       History.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       Readme.md
+        ¦       
+        +---cors
+        ¦   ¦   CONTRIBUTING.md
+        ¦   ¦   HISTORY.md
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   
+        ¦   +---lib
+        ¦           index.js
+        ¦           
+        +---debug
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   
+        ¦   +---src
+        ¦           browser.js
+        ¦           common.js
+        ¦           index.js
+        ¦           node.js
+        ¦           
+        +---depd
+        ¦   ¦   History.md
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   Readme.md
+        ¦   ¦   
+        ¦   +---lib
+        ¦       +---browser
+        ¦               index.js
+        ¦               
+        +---dunder-proto
+        ¦   ¦   .eslintrc
+        ¦   ¦   .nycrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   get.d.ts
+        ¦   ¦   get.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   set.d.ts
+        ¦   ¦   set.js
+        ¦   ¦   tsconfig.json
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---test
+        ¦           get.js
+        ¦           index.js
+        ¦           set.js
+        ¦           
+        +---ee-first
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---encodeurl
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---es-define-property
+        ¦   ¦   .eslintrc
+        ¦   ¦   .nycrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   index.d.ts
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   tsconfig.json
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---test
+        ¦           index.js
+        ¦           
+        +---es-errors
+        ¦   ¦   .eslintrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   eval.d.ts
+        ¦   ¦   eval.js
+        ¦   ¦   index.d.ts
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   range.d.ts
+        ¦   ¦   range.js
+        ¦   ¦   README.md
+        ¦   ¦   ref.d.ts
+        ¦   ¦   ref.js
+        ¦   ¦   syntax.d.ts
+        ¦   ¦   syntax.js
+        ¦   ¦   tsconfig.json
+        ¦   ¦   type.d.ts
+        ¦   ¦   type.js
+        ¦   ¦   uri.d.ts
+        ¦   ¦   uri.js
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---test
+        ¦           index.js
+        ¦           
+        +---es-object-atoms
+        ¦   ¦   .eslintrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   index.d.ts
+        ¦   ¦   index.js
+        ¦   ¦   isObject.d.ts
+        ¦   ¦   isObject.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   RequireObjectCoercible.d.ts
+        ¦   ¦   RequireObjectCoercible.js
+        ¦   ¦   ToObject.d.ts
+        ¦   ¦   ToObject.js
+        ¦   ¦   tsconfig.json
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---test
+        ¦           index.js
+        ¦           
+        +---escape-html
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       Readme.md
+        ¦       
+        +---etag
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---express
+        ¦   ¦   History.md
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   Readme.md
+        ¦   ¦   
+        ¦   +---lib
+        ¦           application.js
+        ¦           express.js
+        ¦           request.js
+        ¦           response.js
+        ¦           utils.js
+        ¦           view.js
+        ¦           
+        +---finalhandler
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---forwarded
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---fresh
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---function-bind
+        ¦   ¦   .eslintrc
+        ¦   ¦   .nycrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   implementation.js
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       SECURITY.md
+        ¦   ¦       
+        ¦   +---test
+        ¦           .eslintrc
+        ¦           index.js
+        ¦           
+        +---get-intrinsic
+        ¦   ¦   .eslintrc
+        ¦   ¦   .nycrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---test
+        ¦           GetIntrinsic.js
+        ¦           
+        +---get-proto
+        ¦   ¦   .eslintrc
+        ¦   ¦   .nycrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   index.d.ts
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   Object.getPrototypeOf.d.ts
+        ¦   ¦   Object.getPrototypeOf.js
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   Reflect.getPrototypeOf.d.ts
+        ¦   ¦   Reflect.getPrototypeOf.js
+        ¦   ¦   tsconfig.json
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---test
+        ¦           index.js
+        ¦           
+        +---gopd
+        ¦   ¦   .eslintrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   gOPD.d.ts
+        ¦   ¦   gOPD.js
+        ¦   ¦   index.d.ts
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   tsconfig.json
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---test
+        ¦           index.js
+        ¦           
+        +---has-symbols
+        ¦   ¦   .eslintrc
+        ¦   ¦   .nycrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   index.d.ts
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   shams.d.ts
+        ¦   ¦   shams.js
+        ¦   ¦   tsconfig.json
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---test
+        ¦       ¦   index.js
+        ¦       ¦   tests.js
+        ¦       ¦   
+        ¦       +---shams
+        ¦               core-js.js
+        ¦               get-own-property-symbols.js
+        ¦               
+        +---hasown
+        ¦   ¦   .eslintrc
+        ¦   ¦   .nycrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   index.d.ts
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   tsconfig.json
+        ¦   ¦   
+        ¦   +---.github
+        ¦           FUNDING.yml
+        ¦           
+        +---http-errors
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---iconv-lite
+        ¦   ¦   Changelog.md
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       dependabot.yml
+        ¦   ¦       
+        ¦   +---.idea
+        ¦   ¦   ¦   iconv-lite.iml
+        ¦   ¦   ¦   modules.xml
+        ¦   ¦   ¦   vcs.xml
+        ¦   ¦   ¦   
+        ¦   ¦   +---codeStyles
+        ¦   ¦   ¦       codeStyleConfig.xml
+        ¦   ¦   ¦       Project.xml
+        ¦   ¦   ¦       
+        ¦   ¦   +---inspectionProfiles
+        ¦   ¦           Project_Default.xml
+        ¦   ¦           
+        ¦   +---encodings
+        ¦   ¦   ¦   dbcs-codec.js
+        ¦   ¦   ¦   dbcs-data.js
+        ¦   ¦   ¦   index.js
+        ¦   ¦   ¦   internal.js
+        ¦   ¦   ¦   sbcs-codec.js
+        ¦   ¦   ¦   sbcs-data-generated.js
+        ¦   ¦   ¦   sbcs-data.js
+        ¦   ¦   ¦   utf16.js
+        ¦   ¦   ¦   utf32.js
+        ¦   ¦   ¦   utf7.js
+        ¦   ¦   ¦   
+        ¦   ¦   +---tables
+        ¦   ¦           big5-added.json
+        ¦   ¦           cp936.json
+        ¦   ¦           cp949.json
+        ¦   ¦           cp950.json
+        ¦   ¦           eucjp.json
+        ¦   ¦           gb18030-ranges.json
+        ¦   ¦           gbk-added.json
+        ¦   ¦           shiftjis.json
+        ¦   ¦           
+        ¦   +---lib
+        ¦           bom-handling.js
+        ¦           index.d.ts
+        ¦           index.js
+        ¦           streams.js
+        ¦           
+        +---inherits
+        ¦       inherits.js
+        ¦       inherits_browser.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---ipaddr.js
+        ¦   ¦   ipaddr.min.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   
+        ¦   +---lib
+        ¦           ipaddr.js
+        ¦           ipaddr.js.d.ts
+        ¦           
+        +---is-promise
+        ¦       index.d.ts
+        ¦       index.js
+        ¦       index.mjs
+        ¦       LICENSE
+        ¦       package.json
+        ¦       readme.md
+        ¦       
+        +---math-intrinsics
+        ¦   ¦   .eslintrc
+        ¦   ¦   abs.d.ts
+        ¦   ¦   abs.js
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   floor.d.ts
+        ¦   ¦   floor.js
+        ¦   ¦   isFinite.d.ts
+        ¦   ¦   isFinite.js
+        ¦   ¦   isInteger.d.ts
+        ¦   ¦   isInteger.js
+        ¦   ¦   isNaN.d.ts
+        ¦   ¦   isNaN.js
+        ¦   ¦   isNegativeZero.d.ts
+        ¦   ¦   isNegativeZero.js
+        ¦   ¦   LICENSE
+        ¦   ¦   max.d.ts
+        ¦   ¦   max.js
+        ¦   ¦   min.d.ts
+        ¦   ¦   min.js
+        ¦   ¦   mod.d.ts
+        ¦   ¦   mod.js
+        ¦   ¦   package.json
+        ¦   ¦   pow.d.ts
+        ¦   ¦   pow.js
+        ¦   ¦   README.md
+        ¦   ¦   round.d.ts
+        ¦   ¦   round.js
+        ¦   ¦   sign.d.ts
+        ¦   ¦   sign.js
+        ¦   ¦   tsconfig.json
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---constants
+        ¦   ¦       maxArrayLength.d.ts
+        ¦   ¦       maxArrayLength.js
+        ¦   ¦       maxSafeInteger.d.ts
+        ¦   ¦       maxSafeInteger.js
+        ¦   ¦       maxValue.d.ts
+        ¦   ¦       maxValue.js
+        ¦   ¦       
+        ¦   +---test
+        ¦           index.js
+        ¦           
+        +---media-typer
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---merge-descriptors
+        ¦       index.d.ts
+        ¦       index.js
+        ¦       license
+        ¦       package.json
+        ¦       readme.md
+        ¦       
+        +---mime-db
+        ¦       db.json
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---mime-types
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       mimeScore.js
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---ms
+        ¦       index.js
+        ¦       license.md
+        ¦       package.json
+        ¦       readme.md
+        ¦       
+        +---negotiator
+        ¦   ¦   HISTORY.md
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   
+        ¦   +---lib
+        ¦           charset.js
+        ¦           encoding.js
+        ¦           language.js
+        ¦           mediaType.js
+        ¦           
+        +---object-assign
+        ¦       index.js
+        ¦       license
+        ¦       package.json
+        ¦       readme.md
+        ¦       
+        +---object-inspect
+        ¦   ¦   .eslintrc
+        ¦   ¦   .nycrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package-support.json
+        ¦   ¦   package.json
+        ¦   ¦   readme.markdown
+        ¦   ¦   test-core-js.js
+        ¦   ¦   util.inspect.js
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---example
+        ¦   ¦       all.js
+        ¦   ¦       circular.js
+        ¦   ¦       fn.js
+        ¦   ¦       inspect.js
+        ¦   ¦       
+        ¦   +---test
+        ¦       ¦   bigint.js
+        ¦       ¦   circular.js
+        ¦       ¦   deep.js
+        ¦       ¦   element.js
+        ¦       ¦   err.js
+        ¦       ¦   fakes.js
+        ¦       ¦   fn.js
+        ¦       ¦   global.js
+        ¦       ¦   has.js
+        ¦       ¦   holes.js
+        ¦       ¦   indent-option.js
+        ¦       ¦   inspect.js
+        ¦       ¦   lowbyte.js
+        ¦       ¦   number.js
+        ¦       ¦   quoteStyle.js
+        ¦       ¦   toStringTag.js
+        ¦       ¦   undef.js
+        ¦       ¦   values.js
+        ¦       ¦   
+        ¦       +---browser
+        ¦               dom.js
+        ¦               
+        +---on-finished
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---once
+        ¦       LICENSE
+        ¦       once.js
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---parseurl
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---path-to-regexp
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   Readme.md
+        ¦   ¦   
+        ¦   +---dist
+        ¦           index.d.ts
+        ¦           index.js
+        ¦           index.js.map
+        ¦           
+        +---proxy-addr
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---qs
+        ¦   ¦   .editorconfig
+        ¦   ¦   .eslintrc
+        ¦   ¦   .nycrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   LICENSE.md
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---dist
+        ¦   ¦       qs.js
+        ¦   ¦       
+        ¦   +---lib
+        ¦   ¦       formats.js
+        ¦   ¦       index.js
+        ¦   ¦       parse.js
+        ¦   ¦       stringify.js
+        ¦   ¦       utils.js
+        ¦   ¦       
+        ¦   +---test
+        ¦           empty-keys-cases.js
+        ¦           parse.js
+        ¦           stringify.js
+        ¦           utils.js
+        ¦           
+        +---range-parser
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---raw-body
+        ¦       HISTORY.md
+        ¦       index.d.ts
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       SECURITY.md
+        ¦       
+        +---router
+        ¦   ¦   HISTORY.md
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   
+        ¦   +---lib
+        ¦           layer.js
+        ¦           route.js
+        ¦           
+        +---safe-buffer
+        ¦       index.d.ts
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---safer-buffer
+        ¦       dangerous.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       Porting-Buffer.md
+        ¦       Readme.md
+        ¦       safer.js
+        ¦       tests.js
+        ¦       
+        +---send
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---serve-static
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---setprototypeof
+        ¦   ¦   index.d.ts
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   
+        ¦   +---test
+        ¦           index.js
+        ¦           
+        +---side-channel
+        ¦   ¦   .editorconfig
+        ¦   ¦   .eslintrc
+        ¦   ¦   .nycrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   index.d.ts
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   tsconfig.json
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---test
+        ¦           index.js
+        ¦           
+        +---side-channel-list
+        ¦   ¦   .editorconfig
+        ¦   ¦   .eslintrc
+        ¦   ¦   .nycrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   index.d.ts
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   list.d.ts
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   tsconfig.json
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---test
+        ¦           index.js
+        ¦           
+        +---side-channel-map
+        ¦   ¦   .editorconfig
+        ¦   ¦   .eslintrc
+        ¦   ¦   .nycrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   index.d.ts
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   tsconfig.json
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---test
+        ¦           index.js
+        ¦           
+        +---side-channel-weakmap
+        ¦   ¦   .editorconfig
+        ¦   ¦   .eslintrc
+        ¦   ¦   .nycrc
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   index.d.ts
+        ¦   ¦   index.js
+        ¦   ¦   LICENSE
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   tsconfig.json
+        ¦   ¦   
+        ¦   +---.github
+        ¦   ¦       FUNDING.yml
+        ¦   ¦       
+        ¦   +---test
+        ¦           index.js
+        ¦           
+        +---statuses
+        ¦       codes.json
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---stripe
+        ¦   ¦   CHANGELOG.md
+        ¦   ¦   LICENSE
+        ¦   ¦   OPENAPI_VERSION
+        ¦   ¦   package.json
+        ¦   ¦   README.md
+        ¦   ¦   VERSION
+        ¦   ¦   
+        ¦   +---cjs
+        ¦   ¦   ¦   apiVersion.js
+        ¦   ¦   ¦   autoPagination.js
+        ¦   ¦   ¦   Error.js
+        ¦   ¦   ¦   multipart.js
+        ¦   ¦   ¦   package.json
+        ¦   ¦   ¦   RequestSender.js
+        ¦   ¦   ¦   ResourceNamespace.js
+        ¦   ¦   ¦   resources.js
+        ¦   ¦   ¦   stripe.cjs.node.js
+        ¦   ¦   ¦   stripe.cjs.worker.js
+        ¦   ¦   ¦   stripe.core.js
+        ¦   ¦   ¦   StripeEmitter.js
+        ¦   ¦   ¦   StripeMethod.js
+        ¦   ¦   ¦   StripeResource.js
+        ¦   ¦   ¦   utils.js
+        ¦   ¦   ¦   Webhooks.js
+        ¦   ¦   ¦   
+        ¦   ¦   +---crypto
+        ¦   ¦   ¦       CryptoProvider.js
+        ¦   ¦   ¦       NodeCryptoProvider.js
+        ¦   ¦   ¦       SubtleCryptoProvider.js
+        ¦   ¦   ¦       
+        ¦   ¦   +---net
+        ¦   ¦   ¦       FetchHttpClient.js
+        ¦   ¦   ¦       HttpClient.js
+        ¦   ¦   ¦       NodeHttpClient.js
+        ¦   ¦   ¦       
+        ¦   ¦   +---platform
+        ¦   ¦   ¦       NodePlatformFunctions.js
+        ¦   ¦   ¦       PlatformFunctions.js
+        ¦   ¦   ¦       WebPlatformFunctions.js
+        ¦   ¦   ¦       
+        ¦   ¦   +---resources
+        ¦   ¦       ¦   AccountLinks.js
+        ¦   ¦       ¦   Accounts.js
+        ¦   ¦       ¦   AccountSessions.js
+        ¦   ¦       ¦   ApplePayDomains.js
+        ¦   ¦       ¦   ApplicationFees.js
+        ¦   ¦       ¦   Balance.js
+        ¦   ¦       ¦   BalanceTransactions.js
+        ¦   ¦       ¦   Charges.js
+        ¦   ¦       ¦   ConfirmationTokens.js
+        ¦   ¦       ¦   CountrySpecs.js
+        ¦   ¦       ¦   Coupons.js
+        ¦   ¦       ¦   CreditNotes.js
+        ¦   ¦       ¦   Customers.js
+        ¦   ¦       ¦   CustomerSessions.js
+        ¦   ¦       ¦   Disputes.js
+        ¦   ¦       ¦   EphemeralKeys.js
+        ¦   ¦       ¦   Events.js
+        ¦   ¦       ¦   ExchangeRates.js
+        ¦   ¦       ¦   FileLinks.js
+        ¦   ¦       ¦   Files.js
+        ¦   ¦       ¦   InvoiceItems.js
+        ¦   ¦       ¦   InvoicePayments.js
+        ¦   ¦       ¦   InvoiceRenderingTemplates.js
+        ¦   ¦       ¦   Invoices.js
+        ¦   ¦       ¦   Mandates.js
+        ¦   ¦       ¦   OAuth.js
+        ¦   ¦       ¦   PaymentIntents.js
+        ¦   ¦       ¦   PaymentLinks.js
+        ¦   ¦       ¦   PaymentMethodConfigurations.js
+        ¦   ¦       ¦   PaymentMethodDomains.js
+        ¦   ¦       ¦   PaymentMethods.js
+        ¦   ¦       ¦   Payouts.js
+        ¦   ¦       ¦   Plans.js
+        ¦   ¦       ¦   Prices.js
+        ¦   ¦       ¦   Products.js
+        ¦   ¦       ¦   PromotionCodes.js
+        ¦   ¦       ¦   Quotes.js
+        ¦   ¦       ¦   Refunds.js
+        ¦   ¦       ¦   Reviews.js
+        ¦   ¦       ¦   SetupAttempts.js
+        ¦   ¦       ¦   SetupIntents.js
+        ¦   ¦       ¦   ShippingRates.js
+        ¦   ¦       ¦   Sources.js
+        ¦   ¦       ¦   SubscriptionItems.js
+        ¦   ¦       ¦   Subscriptions.js
+        ¦   ¦       ¦   SubscriptionSchedules.js
+        ¦   ¦       ¦   TaxCodes.js
+        ¦   ¦       ¦   TaxIds.js
+        ¦   ¦       ¦   TaxRates.js
+        ¦   ¦       ¦   Tokens.js
+        ¦   ¦       ¦   Topups.js
+        ¦   ¦       ¦   Transfers.js
+        ¦   ¦       ¦   WebhookEndpoints.js
+        ¦   ¦       ¦   
+        ¦   ¦       +---Apps
+        ¦   ¦       ¦       Secrets.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Billing
+        ¦   ¦       ¦       Alerts.js
+        ¦   ¦       ¦       CreditBalanceSummary.js
+        ¦   ¦       ¦       CreditBalanceTransactions.js
+        ¦   ¦       ¦       CreditGrants.js
+        ¦   ¦       ¦       MeterEventAdjustments.js
+        ¦   ¦       ¦       MeterEvents.js
+        ¦   ¦       ¦       Meters.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---BillingPortal
+        ¦   ¦       ¦       Configurations.js
+        ¦   ¦       ¦       Sessions.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Checkout
+        ¦   ¦       ¦       Sessions.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Climate
+        ¦   ¦       ¦       Orders.js
+        ¦   ¦       ¦       Products.js
+        ¦   ¦       ¦       Suppliers.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Entitlements
+        ¦   ¦       ¦       ActiveEntitlements.js
+        ¦   ¦       ¦       Features.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---FinancialConnections
+        ¦   ¦       ¦       Accounts.js
+        ¦   ¦       ¦       Sessions.js
+        ¦   ¦       ¦       Transactions.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Forwarding
+        ¦   ¦       ¦       Requests.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Identity
+        ¦   ¦       ¦       VerificationReports.js
+        ¦   ¦       ¦       VerificationSessions.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Issuing
+        ¦   ¦       ¦       Authorizations.js
+        ¦   ¦       ¦       Cardholders.js
+        ¦   ¦       ¦       Cards.js
+        ¦   ¦       ¦       Disputes.js
+        ¦   ¦       ¦       PersonalizationDesigns.js
+        ¦   ¦       ¦       PhysicalBundles.js
+        ¦   ¦       ¦       Tokens.js
+        ¦   ¦       ¦       Transactions.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Radar
+        ¦   ¦       ¦       EarlyFraudWarnings.js
+        ¦   ¦       ¦       ValueListItems.js
+        ¦   ¦       ¦       ValueLists.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Reporting
+        ¦   ¦       ¦       ReportRuns.js
+        ¦   ¦       ¦       ReportTypes.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Sigma
+        ¦   ¦       ¦       ScheduledQueryRuns.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Tax
+        ¦   ¦       ¦       Calculations.js
+        ¦   ¦       ¦       Registrations.js
+        ¦   ¦       ¦       Settings.js
+        ¦   ¦       ¦       Transactions.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Terminal
+        ¦   ¦       ¦       Configurations.js
+        ¦   ¦       ¦       ConnectionTokens.js
+        ¦   ¦       ¦       Locations.js
+        ¦   ¦       ¦       Readers.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---TestHelpers
+        ¦   ¦       ¦   ¦   ConfirmationTokens.js
+        ¦   ¦       ¦   ¦   Customers.js
+        ¦   ¦       ¦   ¦   Refunds.js
+        ¦   ¦       ¦   ¦   TestClocks.js
+        ¦   ¦       ¦   ¦   
+        ¦   ¦       ¦   +---Issuing
+        ¦   ¦       ¦   ¦       Authorizations.js
+        ¦   ¦       ¦   ¦       Cards.js
+        ¦   ¦       ¦   ¦       PersonalizationDesigns.js
+        ¦   ¦       ¦   ¦       Transactions.js
+        ¦   ¦       ¦   ¦       
+        ¦   ¦       ¦   +---Terminal
+        ¦   ¦       ¦   ¦       Readers.js
+        ¦   ¦       ¦   ¦       
+        ¦   ¦       ¦   +---Treasury
+        ¦   ¦       ¦           InboundTransfers.js
+        ¦   ¦       ¦           OutboundPayments.js
+        ¦   ¦       ¦           OutboundTransfers.js
+        ¦   ¦       ¦           ReceivedCredits.js
+        ¦   ¦       ¦           ReceivedDebits.js
+        ¦   ¦       ¦           
+        ¦   ¦       +---Treasury
+        ¦   ¦       ¦       CreditReversals.js
+        ¦   ¦       ¦       DebitReversals.js
+        ¦   ¦       ¦       FinancialAccounts.js
+        ¦   ¦       ¦       InboundTransfers.js
+        ¦   ¦       ¦       OutboundPayments.js
+        ¦   ¦       ¦       OutboundTransfers.js
+        ¦   ¦       ¦       ReceivedCredits.js
+        ¦   ¦       ¦       ReceivedDebits.js
+        ¦   ¦       ¦       TransactionEntries.js
+        ¦   ¦       ¦       Transactions.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---V2
+        ¦   ¦           +---Billing
+        ¦   ¦           ¦       MeterEventAdjustments.js
+        ¦   ¦           ¦       MeterEvents.js
+        ¦   ¦           ¦       MeterEventSession.js
+        ¦   ¦           ¦       MeterEventStream.js
+        ¦   ¦           ¦       
+        ¦   ¦           +---Core
+        ¦   ¦                   EventDestinations.js
+        ¦   ¦                   Events.js
+        ¦   ¦                   
+        ¦   +---esm
+        ¦   ¦   ¦   apiVersion.js
+        ¦   ¦   ¦   autoPagination.js
+        ¦   ¦   ¦   Error.js
+        ¦   ¦   ¦   multipart.js
+        ¦   ¦   ¦   package.json
+        ¦   ¦   ¦   RequestSender.js
+        ¦   ¦   ¦   ResourceNamespace.js
+        ¦   ¦   ¦   resources.js
+        ¦   ¦   ¦   stripe.core.js
+        ¦   ¦   ¦   stripe.esm.node.js
+        ¦   ¦   ¦   stripe.esm.worker.js
+        ¦   ¦   ¦   StripeEmitter.js
+        ¦   ¦   ¦   StripeMethod.js
+        ¦   ¦   ¦   StripeResource.js
+        ¦   ¦   ¦   utils.js
+        ¦   ¦   ¦   Webhooks.js
+        ¦   ¦   ¦   
+        ¦   ¦   +---crypto
+        ¦   ¦   ¦       CryptoProvider.js
+        ¦   ¦   ¦       NodeCryptoProvider.js
+        ¦   ¦   ¦       SubtleCryptoProvider.js
+        ¦   ¦   ¦       
+        ¦   ¦   +---net
+        ¦   ¦   ¦       FetchHttpClient.js
+        ¦   ¦   ¦       HttpClient.js
+        ¦   ¦   ¦       NodeHttpClient.js
+        ¦   ¦   ¦       
+        ¦   ¦   +---platform
+        ¦   ¦   ¦       NodePlatformFunctions.js
+        ¦   ¦   ¦       PlatformFunctions.js
+        ¦   ¦   ¦       WebPlatformFunctions.js
+        ¦   ¦   ¦       
+        ¦   ¦   +---resources
+        ¦   ¦       ¦   AccountLinks.js
+        ¦   ¦       ¦   Accounts.js
+        ¦   ¦       ¦   AccountSessions.js
+        ¦   ¦       ¦   ApplePayDomains.js
+        ¦   ¦       ¦   ApplicationFees.js
+        ¦   ¦       ¦   Balance.js
+        ¦   ¦       ¦   BalanceTransactions.js
+        ¦   ¦       ¦   Charges.js
+        ¦   ¦       ¦   ConfirmationTokens.js
+        ¦   ¦       ¦   CountrySpecs.js
+        ¦   ¦       ¦   Coupons.js
+        ¦   ¦       ¦   CreditNotes.js
+        ¦   ¦       ¦   Customers.js
+        ¦   ¦       ¦   CustomerSessions.js
+        ¦   ¦       ¦   Disputes.js
+        ¦   ¦       ¦   EphemeralKeys.js
+        ¦   ¦       ¦   Events.js
+        ¦   ¦       ¦   ExchangeRates.js
+        ¦   ¦       ¦   FileLinks.js
+        ¦   ¦       ¦   Files.js
+        ¦   ¦       ¦   InvoiceItems.js
+        ¦   ¦       ¦   InvoicePayments.js
+        ¦   ¦       ¦   InvoiceRenderingTemplates.js
+        ¦   ¦       ¦   Invoices.js
+        ¦   ¦       ¦   Mandates.js
+        ¦   ¦       ¦   OAuth.js
+        ¦   ¦       ¦   PaymentIntents.js
+        ¦   ¦       ¦   PaymentLinks.js
+        ¦   ¦       ¦   PaymentMethodConfigurations.js
+        ¦   ¦       ¦   PaymentMethodDomains.js
+        ¦   ¦       ¦   PaymentMethods.js
+        ¦   ¦       ¦   Payouts.js
+        ¦   ¦       ¦   Plans.js
+        ¦   ¦       ¦   Prices.js
+        ¦   ¦       ¦   Products.js
+        ¦   ¦       ¦   PromotionCodes.js
+        ¦   ¦       ¦   Quotes.js
+        ¦   ¦       ¦   Refunds.js
+        ¦   ¦       ¦   Reviews.js
+        ¦   ¦       ¦   SetupAttempts.js
+        ¦   ¦       ¦   SetupIntents.js
+        ¦   ¦       ¦   ShippingRates.js
+        ¦   ¦       ¦   Sources.js
+        ¦   ¦       ¦   SubscriptionItems.js
+        ¦   ¦       ¦   Subscriptions.js
+        ¦   ¦       ¦   SubscriptionSchedules.js
+        ¦   ¦       ¦   TaxCodes.js
+        ¦   ¦       ¦   TaxIds.js
+        ¦   ¦       ¦   TaxRates.js
+        ¦   ¦       ¦   Tokens.js
+        ¦   ¦       ¦   Topups.js
+        ¦   ¦       ¦   Transfers.js
+        ¦   ¦       ¦   WebhookEndpoints.js
+        ¦   ¦       ¦   
+        ¦   ¦       +---Apps
+        ¦   ¦       ¦       Secrets.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Billing
+        ¦   ¦       ¦       Alerts.js
+        ¦   ¦       ¦       CreditBalanceSummary.js
+        ¦   ¦       ¦       CreditBalanceTransactions.js
+        ¦   ¦       ¦       CreditGrants.js
+        ¦   ¦       ¦       MeterEventAdjustments.js
+        ¦   ¦       ¦       MeterEvents.js
+        ¦   ¦       ¦       Meters.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---BillingPortal
+        ¦   ¦       ¦       Configurations.js
+        ¦   ¦       ¦       Sessions.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Checkout
+        ¦   ¦       ¦       Sessions.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Climate
+        ¦   ¦       ¦       Orders.js
+        ¦   ¦       ¦       Products.js
+        ¦   ¦       ¦       Suppliers.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Entitlements
+        ¦   ¦       ¦       ActiveEntitlements.js
+        ¦   ¦       ¦       Features.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---FinancialConnections
+        ¦   ¦       ¦       Accounts.js
+        ¦   ¦       ¦       Sessions.js
+        ¦   ¦       ¦       Transactions.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Forwarding
+        ¦   ¦       ¦       Requests.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Identity
+        ¦   ¦       ¦       VerificationReports.js
+        ¦   ¦       ¦       VerificationSessions.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Issuing
+        ¦   ¦       ¦       Authorizations.js
+        ¦   ¦       ¦       Cardholders.js
+        ¦   ¦       ¦       Cards.js
+        ¦   ¦       ¦       Disputes.js
+        ¦   ¦       ¦       PersonalizationDesigns.js
+        ¦   ¦       ¦       PhysicalBundles.js
+        ¦   ¦       ¦       Tokens.js
+        ¦   ¦       ¦       Transactions.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Radar
+        ¦   ¦       ¦       EarlyFraudWarnings.js
+        ¦   ¦       ¦       ValueListItems.js
+        ¦   ¦       ¦       ValueLists.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Reporting
+        ¦   ¦       ¦       ReportRuns.js
+        ¦   ¦       ¦       ReportTypes.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Sigma
+        ¦   ¦       ¦       ScheduledQueryRuns.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Tax
+        ¦   ¦       ¦       Calculations.js
+        ¦   ¦       ¦       Registrations.js
+        ¦   ¦       ¦       Settings.js
+        ¦   ¦       ¦       Transactions.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---Terminal
+        ¦   ¦       ¦       Configurations.js
+        ¦   ¦       ¦       ConnectionTokens.js
+        ¦   ¦       ¦       Locations.js
+        ¦   ¦       ¦       Readers.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---TestHelpers
+        ¦   ¦       ¦   ¦   ConfirmationTokens.js
+        ¦   ¦       ¦   ¦   Customers.js
+        ¦   ¦       ¦   ¦   Refunds.js
+        ¦   ¦       ¦   ¦   TestClocks.js
+        ¦   ¦       ¦   ¦   
+        ¦   ¦       ¦   +---Issuing
+        ¦   ¦       ¦   ¦       Authorizations.js
+        ¦   ¦       ¦   ¦       Cards.js
+        ¦   ¦       ¦   ¦       PersonalizationDesigns.js
+        ¦   ¦       ¦   ¦       Transactions.js
+        ¦   ¦       ¦   ¦       
+        ¦   ¦       ¦   +---Terminal
+        ¦   ¦       ¦   ¦       Readers.js
+        ¦   ¦       ¦   ¦       
+        ¦   ¦       ¦   +---Treasury
+        ¦   ¦       ¦           InboundTransfers.js
+        ¦   ¦       ¦           OutboundPayments.js
+        ¦   ¦       ¦           OutboundTransfers.js
+        ¦   ¦       ¦           ReceivedCredits.js
+        ¦   ¦       ¦           ReceivedDebits.js
+        ¦   ¦       ¦           
+        ¦   ¦       +---Treasury
+        ¦   ¦       ¦       CreditReversals.js
+        ¦   ¦       ¦       DebitReversals.js
+        ¦   ¦       ¦       FinancialAccounts.js
+        ¦   ¦       ¦       InboundTransfers.js
+        ¦   ¦       ¦       OutboundPayments.js
+        ¦   ¦       ¦       OutboundTransfers.js
+        ¦   ¦       ¦       ReceivedCredits.js
+        ¦   ¦       ¦       ReceivedDebits.js
+        ¦   ¦       ¦       TransactionEntries.js
+        ¦   ¦       ¦       Transactions.js
+        ¦   ¦       ¦       
+        ¦   ¦       +---V2
+        ¦   ¦           +---Billing
+        ¦   ¦           ¦       MeterEventAdjustments.js
+        ¦   ¦           ¦       MeterEvents.js
+        ¦   ¦           ¦       MeterEventSession.js
+        ¦   ¦           ¦       MeterEventStream.js
+        ¦   ¦           ¦       
+        ¦   ¦           +---Core
+        ¦   ¦                   EventDestinations.js
+        ¦   ¦                   Events.js
+        ¦   ¦                   
+        ¦   +---types
+        ¦       ¦   .eslintrc.js
+        ¦       ¦   AccountLinks.d.ts
+        ¦       ¦   AccountLinksResource.d.ts
+        ¦       ¦   Accounts.d.ts
+        ¦       ¦   AccountSessions.d.ts
+        ¦       ¦   AccountSessionsResource.d.ts
+        ¦       ¦   AccountsResource.d.ts
+        ¦       ¦   ApplePayDomains.d.ts
+        ¦       ¦   ApplePayDomainsResource.d.ts
+        ¦       ¦   ApplicationFees.d.ts
+        ¦       ¦   ApplicationFeesResource.d.ts
+        ¦       ¦   Applications.d.ts
+        ¦       ¦   Balance.d.ts
+        ¦       ¦   BalanceResource.d.ts
+        ¦       ¦   BalanceTransactions.d.ts
+        ¦       ¦   BalanceTransactionSources.d.ts
+        ¦       ¦   BalanceTransactionsResource.d.ts
+        ¦       ¦   BankAccounts.d.ts
+        ¦       ¦   Capabilities.d.ts
+        ¦       ¦   Cards.d.ts
+        ¦       ¦   CashBalances.d.ts
+        ¦       ¦   Charges.d.ts
+        ¦       ¦   ChargesResource.d.ts
+        ¦       ¦   ConfirmationTokens.d.ts
+        ¦       ¦   ConfirmationTokensResource.d.ts
+        ¦       ¦   ConnectCollectionTransfers.d.ts
+        ¦       ¦   CountrySpecs.d.ts
+        ¦       ¦   CountrySpecsResource.d.ts
+        ¦       ¦   Coupons.d.ts
+        ¦       ¦   CouponsResource.d.ts
+        ¦       ¦   CreditNoteLineItems.d.ts
+        ¦       ¦   CreditNotes.d.ts
+        ¦       ¦   CreditNotesResource.d.ts
+        ¦       ¦   CustomerBalanceTransactions.d.ts
+        ¦       ¦   CustomerCashBalanceTransactions.d.ts
+        ¦       ¦   Customers.d.ts
+        ¦       ¦   CustomerSessions.d.ts
+        ¦       ¦   CustomerSessionsResource.d.ts
+        ¦       ¦   CustomerSources.d.ts
+        ¦       ¦   CustomersResource.d.ts
+        ¦       ¦   Discounts.d.ts
+        ¦       ¦   Disputes.d.ts
+        ¦       ¦   DisputesResource.d.ts
+        ¦       ¦   EphemeralKeys.d.ts
+        ¦       ¦   EphemeralKeysResource.d.ts
+        ¦       ¦   Errors.d.ts
+        ¦       ¦   Events.d.ts
+        ¦       ¦   EventsResource.d.ts
+        ¦       ¦   EventTypes.d.ts
+        ¦       ¦   ExchangeRates.d.ts
+        ¦       ¦   ExchangeRatesResource.d.ts
+        ¦       ¦   ExternalAccounts.d.ts
+        ¦       ¦   FeeRefunds.d.ts
+        ¦       ¦   FileLinks.d.ts
+        ¦       ¦   FileLinksResource.d.ts
+        ¦       ¦   Files.d.ts
+        ¦       ¦   FilesResource.d.ts
+        ¦       ¦   FundingInstructions.d.ts
+        ¦       ¦   index.d.ts
+        ¦       ¦   InvoiceItems.d.ts
+        ¦       ¦   InvoiceItemsResource.d.ts
+        ¦       ¦   InvoiceLineItems.d.ts
+        ¦       ¦   InvoicePayments.d.ts
+        ¦       ¦   InvoicePaymentsResource.d.ts
+        ¦       ¦   InvoiceRenderingTemplates.d.ts
+        ¦       ¦   InvoiceRenderingTemplatesResource.d.ts
+        ¦       ¦   Invoices.d.ts
+        ¦       ¦   InvoicesResource.d.ts
+        ¦       ¦   lib.d.ts
+        ¦       ¦   LineItems.d.ts
+        ¦       ¦   LoginLinks.d.ts
+        ¦       ¦   Mandates.d.ts
+        ¦       ¦   MandatesResource.d.ts
+        ¦       ¦   OAuth.d.ts
+        ¦       ¦   PaymentIntents.d.ts
+        ¦       ¦   PaymentIntentsResource.d.ts
+        ¦       ¦   PaymentLinks.d.ts
+        ¦       ¦   PaymentLinksResource.d.ts
+        ¦       ¦   PaymentMethodConfigurations.d.ts
+        ¦       ¦   PaymentMethodConfigurationsResource.d.ts
+        ¦       ¦   PaymentMethodDomains.d.ts
+        ¦       ¦   PaymentMethodDomainsResource.d.ts
+        ¦       ¦   PaymentMethods.d.ts
+        ¦       ¦   PaymentMethodsResource.d.ts
+        ¦       ¦   Payouts.d.ts
+        ¦       ¦   PayoutsResource.d.ts
+        ¦       ¦   Persons.d.ts
+        ¦       ¦   Plans.d.ts
+        ¦       ¦   PlansResource.d.ts
+        ¦       ¦   Prices.d.ts
+        ¦       ¦   PricesResource.d.ts
+        ¦       ¦   ProductFeatures.d.ts
+        ¦       ¦   Products.d.ts
+        ¦       ¦   ProductsResource.d.ts
+        ¦       ¦   PromotionCodes.d.ts
+        ¦       ¦   PromotionCodesResource.d.ts
+        ¦       ¦   Quotes.d.ts
+        ¦       ¦   QuotesResource.d.ts
+        ¦       ¦   Refunds.d.ts
+        ¦       ¦   RefundsResource.d.ts
+        ¦       ¦   ReserveTransactions.d.ts
+        ¦       ¦   Reviews.d.ts
+        ¦       ¦   ReviewsResource.d.ts
+        ¦       ¦   SetupAttempts.d.ts
+        ¦       ¦   SetupAttemptsResource.d.ts
+        ¦       ¦   SetupIntents.d.ts
+        ¦       ¦   SetupIntentsResource.d.ts
+        ¦       ¦   shared.d.ts
+        ¦       ¦   ShippingRates.d.ts
+        ¦       ¦   ShippingRatesResource.d.ts
+        ¦       ¦   SourceMandateNotifications.d.ts
+        ¦       ¦   Sources.d.ts
+        ¦       ¦   SourcesResource.d.ts
+        ¦       ¦   SourceTransactions.d.ts
+        ¦       ¦   SubscriptionItems.d.ts
+        ¦       ¦   SubscriptionItemsResource.d.ts
+        ¦       ¦   Subscriptions.d.ts
+        ¦       ¦   SubscriptionSchedules.d.ts
+        ¦       ¦   SubscriptionSchedulesResource.d.ts
+        ¦       ¦   SubscriptionsResource.d.ts
+        ¦       ¦   TaxCodes.d.ts
+        ¦       ¦   TaxCodesResource.d.ts
+        ¦       ¦   TaxDeductedAtSources.d.ts
+        ¦       ¦   TaxIds.d.ts
+        ¦       ¦   TaxIdsResource.d.ts
+        ¦       ¦   TaxRates.d.ts
+        ¦       ¦   TaxRatesResource.d.ts
+        ¦       ¦   ThinEvent.d.ts
+        ¦       ¦   Tokens.d.ts
+        ¦       ¦   TokensResource.d.ts
+        ¦       ¦   Topups.d.ts
+        ¦       ¦   TopupsResource.d.ts
+        ¦       ¦   TransferReversals.d.ts
+        ¦       ¦   Transfers.d.ts
+        ¦       ¦   TransfersResource.d.ts
+        ¦       ¦   UpcomingInvoices.d.ts
+        ¦       ¦   WebhookEndpoints.d.ts
+        ¦       ¦   WebhookEndpointsResource.d.ts
+        ¦       ¦   Webhooks.d.ts
+        ¦       ¦   
+        ¦       +---Apps
+        ¦       ¦       Secrets.d.ts
+        ¦       ¦       SecretsResource.d.ts
+        ¦       ¦       
+        ¦       +---Billing
+        ¦       ¦       Alerts.d.ts
+        ¦       ¦       AlertsResource.d.ts
+        ¦       ¦       AlertTriggereds.d.ts
+        ¦       ¦       CreditBalanceSummary.d.ts
+        ¦       ¦       CreditBalanceSummaryResource.d.ts
+        ¦       ¦       CreditBalanceTransactions.d.ts
+        ¦       ¦       CreditBalanceTransactionsResource.d.ts
+        ¦       ¦       CreditGrants.d.ts
+        ¦       ¦       CreditGrantsResource.d.ts
+        ¦       ¦       MeterEventAdjustments.d.ts
+        ¦       ¦       MeterEventAdjustmentsResource.d.ts
+        ¦       ¦       MeterEvents.d.ts
+        ¦       ¦       MeterEventsResource.d.ts
+        ¦       ¦       MeterEventSummaries.d.ts
+        ¦       ¦       Meters.d.ts
+        ¦       ¦       MetersResource.d.ts
+        ¦       ¦       
+        ¦       +---BillingPortal
+        ¦       ¦       Configurations.d.ts
+        ¦       ¦       ConfigurationsResource.d.ts
+        ¦       ¦       Sessions.d.ts
+        ¦       ¦       SessionsResource.d.ts
+        ¦       ¦       
+        ¦       +---Checkout
+        ¦       ¦       Sessions.d.ts
+        ¦       ¦       SessionsResource.d.ts
+        ¦       ¦       
+        ¦       +---Climate
+        ¦       ¦       Orders.d.ts
+        ¦       ¦       OrdersResource.d.ts
+        ¦       ¦       Products.d.ts
+        ¦       ¦       ProductsResource.d.ts
+        ¦       ¦       Suppliers.d.ts
+        ¦       ¦       SuppliersResource.d.ts
+        ¦       ¦       
+        ¦       +---crypto
+        ¦       ¦       crypto.d.ts
+        ¦       ¦       
+        ¦       +---Entitlements
+        ¦       ¦       ActiveEntitlements.d.ts
+        ¦       ¦       ActiveEntitlementsResource.d.ts
+        ¦       ¦       ActiveEntitlementSummaries.d.ts
+        ¦       ¦       Features.d.ts
+        ¦       ¦       FeaturesResource.d.ts
+        ¦       ¦       
+        ¦       +---FinancialConnections
+        ¦       ¦       AccountOwners.d.ts
+        ¦       ¦       AccountOwnerships.d.ts
+        ¦       ¦       Accounts.d.ts
+        ¦       ¦       AccountsResource.d.ts
+        ¦       ¦       Sessions.d.ts
+        ¦       ¦       SessionsResource.d.ts
+        ¦       ¦       Transactions.d.ts
+        ¦       ¦       TransactionsResource.d.ts
+        ¦       ¦       
+        ¦       +---Forwarding
+        ¦       ¦       Requests.d.ts
+        ¦       ¦       RequestsResource.d.ts
+        ¦       ¦       
+        ¦       +---Identity
+        ¦       ¦       VerificationReports.d.ts
+        ¦       ¦       VerificationReportsResource.d.ts
+        ¦       ¦       VerificationSessions.d.ts
+        ¦       ¦       VerificationSessionsResource.d.ts
+        ¦       ¦       
+        ¦       +---Issuing
+        ¦       ¦       Authorizations.d.ts
+        ¦       ¦       AuthorizationsResource.d.ts
+        ¦       ¦       Cardholders.d.ts
+        ¦       ¦       CardholdersResource.d.ts
+        ¦       ¦       Cards.d.ts
+        ¦       ¦       CardsResource.d.ts
+        ¦       ¦       Disputes.d.ts
+        ¦       ¦       DisputesResource.d.ts
+        ¦       ¦       PersonalizationDesigns.d.ts
+        ¦       ¦       PersonalizationDesignsResource.d.ts
+        ¦       ¦       PhysicalBundles.d.ts
+        ¦       ¦       PhysicalBundlesResource.d.ts
+        ¦       ¦       Tokens.d.ts
+        ¦       ¦       TokensResource.d.ts
+        ¦       ¦       Transactions.d.ts
+        ¦       ¦       TransactionsResource.d.ts
+        ¦       ¦       
+        ¦       +---net
+        ¦       ¦       net.d.ts
+        ¦       ¦       
+        ¦       +---Radar
+        ¦       ¦       EarlyFraudWarnings.d.ts
+        ¦       ¦       EarlyFraudWarningsResource.d.ts
+        ¦       ¦       ValueListItems.d.ts
+        ¦       ¦       ValueListItemsResource.d.ts
+        ¦       ¦       ValueLists.d.ts
+        ¦       ¦       ValueListsResource.d.ts
+        ¦       ¦       
+        ¦       +---Reporting
+        ¦       ¦       ReportRuns.d.ts
+        ¦       ¦       ReportRunsResource.d.ts
+        ¦       ¦       ReportTypes.d.ts
+        ¦       ¦       ReportTypesResource.d.ts
+        ¦       ¦       
+        ¦       +---Sigma
+        ¦       ¦       ScheduledQueryRuns.d.ts
+        ¦       ¦       ScheduledQueryRunsResource.d.ts
+        ¦       ¦       
+        ¦       +---Tax
+        ¦       ¦       CalculationLineItems.d.ts
+        ¦       ¦       Calculations.d.ts
+        ¦       ¦       CalculationsResource.d.ts
+        ¦       ¦       Registrations.d.ts
+        ¦       ¦       RegistrationsResource.d.ts
+        ¦       ¦       Settings.d.ts
+        ¦       ¦       SettingsResource.d.ts
+        ¦       ¦       TransactionLineItems.d.ts
+        ¦       ¦       Transactions.d.ts
+        ¦       ¦       TransactionsResource.d.ts
+        ¦       ¦       
+        ¦       +---Terminal
+        ¦       ¦       Configurations.d.ts
+        ¦       ¦       ConfigurationsResource.d.ts
+        ¦       ¦       ConnectionTokens.d.ts
+        ¦       ¦       ConnectionTokensResource.d.ts
+        ¦       ¦       Locations.d.ts
+        ¦       ¦       LocationsResource.d.ts
+        ¦       ¦       Readers.d.ts
+        ¦       ¦       ReadersResource.d.ts
+        ¦       ¦       
+        ¦       +---test
+        ¦       ¦       .eslintrc.js
+        ¦       ¦       tsconfig.json
+        ¦       ¦       typescriptTest.ts
+        ¦       ¦       
+        ¦       +---TestHelpers
+        ¦       ¦   ¦   ConfirmationTokensResource.d.ts
+        ¦       ¦   ¦   CustomersResource.d.ts
+        ¦       ¦   ¦   RefundsResource.d.ts
+        ¦       ¦   ¦   TestClocks.d.ts
+        ¦       ¦   ¦   TestClocksResource.d.ts
+        ¦       ¦   ¦   
+        ¦       ¦   +---Issuing
+        ¦       ¦   ¦       AuthorizationsResource.d.ts
+        ¦       ¦   ¦       CardsResource.d.ts
+        ¦       ¦   ¦       PersonalizationDesignsResource.d.ts
+        ¦       ¦   ¦       TransactionsResource.d.ts
+        ¦       ¦   ¦       
+        ¦       ¦   +---Terminal
+        ¦       ¦   ¦       ReadersResource.d.ts
+        ¦       ¦   ¦       
+        ¦       ¦   +---Treasury
+        ¦       ¦           InboundTransfersResource.d.ts
+        ¦       ¦           OutboundPaymentsResource.d.ts
+        ¦       ¦           OutboundTransfersResource.d.ts
+        ¦       ¦           ReceivedCreditsResource.d.ts
+        ¦       ¦           ReceivedDebitsResource.d.ts
+        ¦       ¦           
+        ¦       +---Treasury
+        ¦       ¦       CreditReversals.d.ts
+        ¦       ¦       CreditReversalsResource.d.ts
+        ¦       ¦       DebitReversals.d.ts
+        ¦       ¦       DebitReversalsResource.d.ts
+        ¦       ¦       FinancialAccountFeatures.d.ts
+        ¦       ¦       FinancialAccounts.d.ts
+        ¦       ¦       FinancialAccountsResource.d.ts
+        ¦       ¦       InboundTransfers.d.ts
+        ¦       ¦       InboundTransfersResource.d.ts
+        ¦       ¦       OutboundPayments.d.ts
+        ¦       ¦       OutboundPaymentsResource.d.ts
+        ¦       ¦       OutboundTransfers.d.ts
+        ¦       ¦       OutboundTransfersResource.d.ts
+        ¦       ¦       ReceivedCredits.d.ts
+        ¦       ¦       ReceivedCreditsResource.d.ts
+        ¦       ¦       ReceivedDebits.d.ts
+        ¦       ¦       ReceivedDebitsResource.d.ts
+        ¦       ¦       TransactionEntries.d.ts
+        ¦       ¦       TransactionEntriesResource.d.ts
+        ¦       ¦       Transactions.d.ts
+        ¦       ¦       TransactionsResource.d.ts
+        ¦       ¦       
+        ¦       +---V2
+        ¦           ¦   EventDestinations.d.ts
+        ¦           ¦   Events.d.ts
+        ¦           ¦   EventTypes.d.ts
+        ¦           ¦   
+        ¦           +---Billing
+        ¦           ¦       MeterEventAdjustments.d.ts
+        ¦           ¦       MeterEventAdjustmentsResource.d.ts
+        ¦           ¦       MeterEvents.d.ts
+        ¦           ¦       MeterEventSessionResource.d.ts
+        ¦           ¦       MeterEventSessions.d.ts
+        ¦           ¦       MeterEventsResource.d.ts
+        ¦           ¦       MeterEventStreamResource.d.ts
+        ¦           ¦       
+        ¦           +---Core
+        ¦                   EventDestinationsResource.d.ts
+        ¦                   EventsResource.d.ts
+        ¦                   
+        +---toidentifier
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---type-is
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---undici-types
+        ¦       agent.d.ts
+        ¦       api.d.ts
+        ¦       balanced-pool.d.ts
+        ¦       cache.d.ts
+        ¦       client.d.ts
+        ¦       connector.d.ts
+        ¦       content-type.d.ts
+        ¦       cookies.d.ts
+        ¦       diagnostics-channel.d.ts
+        ¦       dispatcher.d.ts
+        ¦       env-http-proxy-agent.d.ts
+        ¦       errors.d.ts
+        ¦       eventsource.d.ts
+        ¦       fetch.d.ts
+        ¦       file.d.ts
+        ¦       filereader.d.ts
+        ¦       formdata.d.ts
+        ¦       global-dispatcher.d.ts
+        ¦       global-origin.d.ts
+        ¦       handlers.d.ts
+        ¦       header.d.ts
+        ¦       index.d.ts
+        ¦       interceptors.d.ts
+        ¦       LICENSE
+        ¦       mock-agent.d.ts
+        ¦       mock-client.d.ts
+        ¦       mock-errors.d.ts
+        ¦       mock-interceptor.d.ts
+        ¦       mock-pool.d.ts
+        ¦       package.json
+        ¦       patch.d.ts
+        ¦       pool-stats.d.ts
+        ¦       pool.d.ts
+        ¦       proxy-agent.d.ts
+        ¦       readable.d.ts
+        ¦       README.md
+        ¦       retry-agent.d.ts
+        ¦       retry-handler.d.ts
+        ¦       util.d.ts
+        ¦       webidl.d.ts
+        ¦       websocket.d.ts
+        ¦       
+        +---unpipe
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---vary
+        ¦       HISTORY.md
+        ¦       index.js
+        ¦       LICENSE
+        ¦       package.json
+        ¦       README.md
+        ¦       
+        +---wrappy
+                LICENSE
+                package.json
+                README.md
+                wrappy.js
+                

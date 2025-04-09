@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pago exitoso</title>
+</head>
+<body>
+    <h2>Procesando tu reserva...</h2>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="/js/firebaseConfig.js"></script> <!-- Asegúrate que esta ruta sea correcta -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const sessionId = urlParams.get("session_id");
+
+            fetch(`https://api.stripe.com/v1/checkout/sessions/${sessionId}`, {
+                method: "GET",
+                headers: {
+                    Authorization: "Bearer sk_test_51RC1Q9Qc6RyEXYSHqsmTD4QvXJSOvncwE1gI2gfIcRdQaNdFK5cKrqJHbdHMtvohZhlH4GWJiILJI8Uc1BMXkIl100eXlteWWX"
+                }
+            })
+            .then(res => res.json())
+            .then(session => {
+                const data = session.metadata;
+
+                if (!data) {
+                    document.body.innerHTML = "<h2>Error al recuperar los datos de la sesión.</h2>";
+                    return;
+                }
+
+                // Validar y asegurar que ningún campo sea undefined
+                const reservation = {
+                    service: data.service || "Servicio no especificado",
+                    price: data.price || "0",
+                    duration: data.duration || "No especificado",
+                    date: data.date || "Fecha no definida",
+                    time: data.time || "Hora no definida",
+                    firstName: data.firstName || "Nombre no proporcionado",
+                    lastName: data.lastName || "Apellido no proporcionado",
+                    email: session.customer_email || "Sin correo",
+                    phone: data.phone || "Sin teléfono"
+                };
+
+                console.log("Datos de la reserva:", reservation);
+
+                // Verificar si ya existe una reserva en la misma fecha y hora
+                firebase.database().ref("reservations").orderByChild("date").equalTo(reservation.date).once("value", snapshot => {
+                    let exists = false;
+
+                    snapshot.forEach(childSnapshot => {
+                        const existingReservation = childSnapshot.val();
+                        if (existingReservation.time === reservation.time) {
+                            exists = true;
+                        }
+                    });
+
+                    if (exists) {
+                        // Mostrar error si ya existe una reserva a la misma hora
+                        document.body.innerHTML = "<h2>Error: Ya existe una reserva para esta hora. Por favor, elige otro horario.</h2>";
+                    } else {
+                        // Si no existe, guardar la nueva reserva
+                        firebase.database().ref("reservations").push(reservation)
+                            .then(() => {
+                                document.body.innerHTML = `
+                                    <h2>¡Pago realizado con éxito!</h2>
+                                    <p>Gracias por tu reserva, ${reservation.firstName}.</p>
+                                    <p><strong>Servicio:</strong> ${reservation.service}</p>
+                                    <p><strong>Fecha:</strong> ${reservation.date}</p>
+                                    <p><strong>Hora:</strong> ${reservation.time}</p>
+                                `;
+                            })
+                            .catch(error => {
+                                console.error("Error al guardar en Firebase:", error);
+                                document.body.innerHTML = "<h2>Error al registrar tu reserva. Intenta más tarde.</h2>";
+                            });
+                    }
+                });
+            })
+            .catch(error => {
+                console.error("Error al obtener sesión de Stripe:", error);
+                document.body.innerHTML = "<h2>Error al confirmar el pago. Intenta más tarde.</h2>";
+            });
+        });
+    </script>
+</body>
+</html>

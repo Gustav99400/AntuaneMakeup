@@ -198,3 +198,25 @@ input {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+.selected-hour {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+.selected-day {
+  border: 2px solid #4CAF50;
+  background-color: #f0fff0;
+}
+
+.reserved-hour {
+  color: #999;
+  pointer-events: none;
+}
+
+.disabled-hour {
+  color: #ccc;
+  pointer-events: none;
+}
+
