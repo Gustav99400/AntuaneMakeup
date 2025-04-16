@@ -15,6 +15,10 @@
     </style>
 </head>
 <body>
+
+    <div id="loading" style="display:none;">Cargando...</div>
+
+
     <div class="resumen-container">
         <h2>Resumen de tu selección</h2>
         <p id="selected-service"></p>
@@ -68,6 +72,15 @@
         document.getElementById("changeSelection").addEventListener("click", function() {
             window.location.href = "seleccion.html"; 
         });
+
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+        }   
+
     </script>
 
     </body>
