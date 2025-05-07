@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "hmtl",
+    "public": "hmtl",                 
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -8,9 +8,16 @@
     ],
     "rewrites": [
       {
-        "source": "**",
+        "source": "/api/**",            
+        "function": "api"
+      },
+      {
+        "source": "**",                 
         "destination": "/index.html"
       }
     ]
+  },
+  "functions": {
+    "source": "functions"
   }
 }

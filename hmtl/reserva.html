@@ -22,6 +22,7 @@
     <div class="resumen-container">
         <h2>Resumen de tu selección</h2>
         <p id="selected-service"></p>
+        <p id="selected-category"></p>
         <p id="selected-price"></p>
         <p id="selected-duration"></p>
         <button class="change-btn" id="changeSelection">Cambiar selección</button>
@@ -53,7 +54,7 @@
                 
                 <div id="resumenCita"></div>
                 <div class="popup-buttons">
-                    <button type="button" id="payButton">Ir a Pagar</button>
+                    <button type="button" id="payButton">Reservar</button>
                     <button type="button" id="whatsappButton">Contactar por WhatsApp</button>
                     <button id="closePopup" class="close-popup">Cerrar</button>
                 </div>
@@ -64,9 +65,9 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 
-    <script src="/js/firebaseConfig.js"></script>
+    <script src="js/firebaseConfig.js"></script>
 
-    <script src="/js/reserva.js"></script>
+    <script src="js/reserva.js"></script>
 
     <script>
         document.getElementById("changeSelection").addEventListener("click", function() {

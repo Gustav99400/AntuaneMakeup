@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Administrador</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      display: flex;
+    }
+    aside {
+      background: #333;
+      color: #fff;
+      width: 220px;
+      padding: 20px;
+      height: 100vh;
+    }
+    aside h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    aside nav a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+    aside nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      flex-grow: 1;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    input, select {
+      padding: 6px;
+      margin-right: 10px;
+    }
+    #logout {
+      margin-top: 30px;
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <h2>Panel de Administrador</h2>
+    <nav>
+      <a href="#" id="reservationsLink">Reservas</a>
+      <a href="#" id="usersLink">Usuarios</a>
+      <a href="#">Reportes (futuro)</a>
+    </nav>
+    <button id="logout">Cerrar sesión</button>
+  </aside>
+
+  <main id="mainContent">
+    <!-- Sección de Reservas -->
+    <section id="reservationsSection">
+      <h1>Reservas registradas</h1>
+
+      <div>
+        <input type="text" id="searchInput" placeholder="Buscar por nombre o correo">
+        <select id="serviceFilter">
+          <option value="">Todos los servicios</option>
+          <option value="Maquillaje">Maquillaje</option>
+          <option value="Manicura">Manicura</option>
+          <option value="Pestañas">Pestañas</option>
+          <option value="Paquetes">Paquetes</option>
+        </select>
+        <input type="date" id="dateFilter">
+      </div>
+
+      <table id="reservations-table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+            <th>Servicio</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Precio</th>
+            <th>Categoría</th>
+            <th>Estado</th>
+
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Sección de Estadísticas de Usuario -->
+    <section id="userStatsSection" class="hidden">
+      <h1>Estadísticas de Usuarios</h1>
+
+      <!-- Tabla de Estadísticas de Usuario -->
+      <table id="user-stats-table">
+        <thead>
+          <tr>
+            <th>Correo del Usuario</th>
+            <th>Total Reservas</th>
+            <th>Total Gastado (PEN)</th>
+            <th>Promedio por Reserva (PEN)</th>
+            <th>Servicio Más Reservado</th>
+            <th>Fecha Más Frecuente</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="/js/firebaseConfig.js"></script>
+
+  <script>
+    // Redirección si no está autenticado
+    if (localStorage.getItem("auth") !== "true") {
+      window.location.href = "login.html";
+    }
+
+    const tbodyReservations = document.querySelector("#reservations-table tbody");
+    const tbodyUserStats = document.querySelector("#user-stats-table tbody");
+    const reservationsSection = document.getElementById("reservationsSection");
+    const userStatsSection = document.getElementById("userStatsSection");
+    const reservationsLink = document.getElementById("reservationsLink");
+    const usersLink = document.getElementById("usersLink");
+    const logoutButton = document.getElementById("logout");
+    let allReservations = [];
+    let userStats = [];
+
+
+    function renderReservationsTable(data) {
+  tbodyReservations.innerHTML = "";
+  data.forEach(r => {
+    const row = `
+      <tr>
+        <td>${r.firstName} ${r.lastName}</td>
+        <td>${r.email}</td>
+        <td>${r.phone}</td>
+        <td>${r.service}</td>
+        <td>${r.date}</td>
+        <td>${r.time}</td>
+        <td>${r.price}</td>
+        <td>${r.category}</td>
+        <td>${r.status}</td>
+      </tr>`;
+    tbodyReservations.innerHTML += row;
+  });
+}
+
+
+
+    function renderUserStatsTable(userStats) {
+      tbodyUserStats.innerHTML = "";
+      userStats.forEach(stat => {
+        const row = `
+          <tr>
+            <td>${stat.email}</td>
+            <td>${stat.totalReservations}</td>
+            <td>${stat.totalSpent.toFixed(2)} PEN</td>
+            <td>${(stat.totalReservations > 0 ? (stat.totalSpent / stat.totalReservations).toFixed(2) : 0)} PEN</td>
+            <td>${stat.mostReservedService}</td>
+            <td>${stat.mostFrequentDate}</td>
+          </tr>`;
+        tbodyUserStats.innerHTML += row;
+      });
+    }
+
+    function calculateUserStats() {
+      const userMap = {};
+
+      allReservations.forEach(reservation => {
+        const userEmail = reservation.email;
+        if (!userMap[userEmail]) {
+          userMap[userEmail] = {
+            totalReservations: 0,
+            totalSpent: 0,
+            mostReservedService: '',
+            serviceCount: {},
+            mostFrequentDate: '',
+            dateCount: {}
+          };
+        }
+
+        const userStat = userMap[userEmail];
+        userStat.totalReservations++;
+        userStat.totalSpent += parseFloat(reservation.price);
+
+        // Contamos los servicios y fechas
+        userStat.serviceCount[reservation.service] = (userStat.serviceCount[reservation.service] || 0) + 1;
+        userStat.dateCount[reservation.date] = (userStat.dateCount[reservation.date] || 0) + 1;
+      });
+
+      // Organizar y asignar los datos
+      userStats = Object.keys(userMap).map(email => {
+        const stat = userMap[email];
+        stat.mostReservedService = Object.keys(stat.serviceCount).reduce((a, b) => stat.serviceCount[a] > stat.serviceCount[b] ? a : b);
+        stat.mostFrequentDate = Object.keys(stat.dateCount).reduce((a, b) => stat.dateCount[a] > stat.dateCount[b] ? a : b);
+        return { email, ...stat };
+      });
+
+      renderUserStatsTable(userStats);
+    }
+
+    function applyFilters() {
+      const search = document.getElementById("searchInput").value.toLowerCase();
+      const service = document.getElementById("serviceFilter").value;
+      const date = document.getElementById("dateFilter").value;
+
+      const filtered = allReservations.filter(r => {
+        const fullName = (r.firstName + " " + r.lastName).toLowerCase();
+        const matchesName = fullName.includes(search) || (r.email || "").toLowerCase().includes(search);
+        const matchesService = service === "" || r.category === service; // Aquí comparamos con la categoría
+        const matchesDate = date === "" || r.date === date;
+
+        return matchesName && matchesService && matchesDate;
+      });
+
+      renderReservationsTable(filtered);
+    }
+
+    firebase.database().ref("reservations").on("value", async snapshot => {
+  allReservations = [];
+  const statusMap = await getReservationStatuses();
+
+  snapshot.forEach(child => {
+    const reservation = child.val();
+    reservation.id = child.key;
+
+    const status = statusMap[reservation.id];
+    reservation.status = (status === "cancelado") ? "Cancelado" : "Reservado";
+
+    allReservations.push(reservation);
+  });
+
+  renderReservationsTable(allReservations);
+  calculateUserStats();
+  applyFilters();
+});
+
+
+
+    // Filtros
+    document.getElementById("searchInput").addEventListener("input", applyFilters);
+    document.getElementById("serviceFilter").addEventListener("change", applyFilters);
+    document.getElementById("dateFilter").addEventListener("change", applyFilters);
+
+    // Navegación entre "Reservas" y "Usuarios"
+    reservationsLink.addEventListener("click", () => {
+      reservationsSection.classList.remove("hidden");
+      userStatsSection.classList.add("hidden");
+    });
+
+    usersLink.addEventListener("click", () => {
+      reservationsSection.classList.add("hidden");
+      userStatsSection.classList.remove("hidden");
+    });
+
+    // Cerrar sesión
+    logoutButton.addEventListener("click", () => {
+      localStorage.setItem("auth", "false");
+      window.location.href = "login.html";
+    });
+
+    async function getReservationStatuses() {
+  const snapshot = await firebase.database().ref("pendingCancellations").once("value");
+  const statusMap = {};
+  snapshot.forEach(child => {
+    const data = child.val();
+    if (data.reservationKey && data.status) {
+      statusMap[data.reservationKey] = data.status.toLowerCase(); // cancelado o pendiente
+    }
+  });
+  return statusMap;
+}
+
+
+
+  </script>
+</body>
+</html>

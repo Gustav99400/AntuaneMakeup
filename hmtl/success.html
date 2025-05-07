@@ -1,89 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Pago exitoso</title>
+  <meta charset="UTF-8">
+  <title>Pago exitoso</title>
 </head>
 <body>
-    <h2>Procesando tu reserva...</h2>
+  <h2 id="status-message">Procesando tu reserva...</h2>
 
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-    <script src="/js/firebaseConfig.js"></script> <!-- Asegúrate que esta ruta sea correcta -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="/js/firebaseConfig.js"></script> <!-- Verifica que la ruta sea correcta -->
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const sessionId = urlParams.get("session_id");
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const sessionId = params.get("session_id");
+      const statusEl = document.getElementById("status-message");
+      const apiBase = `https://us-central1-antuanemakeup-7950c.cloudfunctions.net/api`;
 
-            fetch(`https://api.stripe.com/v1/checkout/sessions/${sessionId}`, {
-                method: "GET",
-                headers: {
-                    Authorization: "Bearer sk_test_51RC1Q9Qc6RyEXYSHqsmTD4QvXJSOvncwE1gI2gfIcRdQaNdFK5cKrqJHbdHMtvohZhlH4GWJiILJI8Uc1BMXkIl100eXlteWWX"
-                }
+      if (!sessionId) {
+        statusEl.textContent = "ID de sesión no proporcionada.";
+        return;
+      }
+
+      // 1) Recuperar datos de sesión desde backend
+      fetch(`${apiBase}/getSession?session_id=${sessionId}`)
+        .then(res => {
+          if (!res.ok) throw new Error("Error al recuperar datos de la sesión.");
+          return res.json();
+        })
+        .then(session => {
+          const m = session.metadata || {};
+          const reservation = {
+            service:   m.service   || "",
+            price:     m.price     || "",
+            duration:  m.duration  || "",
+            date:      m.date      || "",
+            time:      m.time      || "",
+            firstName: m.firstName || "",
+            lastName:  m.lastName  || "",
+            email:     session.customer_email || "",
+            phone:     m.phone     || "",
+            category:  m.category  || ""  // Incluir categoría en la reserva
+          };
+
+          // 2) Guardar reserva en Firebase
+          return firebase.database().ref("reservations").push(reservation)
+            .then(ref => ({ reservation, key: ref.key }));
+        })
+        .then(({ reservation, key }) => {
+          // 3) Mostrar mensaje de éxito, incluyendo la categoría
+          statusEl.innerHTML = `¡Pago exitoso!<br>
+            Reserva confirmada para <strong>${reservation.firstName} ${reservation.lastName}</strong>.<br>
+            <strong>Servicio:</strong> ${reservation.service}<br>
+            <strong>Fecha:</strong> ${reservation.date}<br>
+            <strong>Hora:</strong> ${reservation.time}<br>
+            <strong>Categoría:</strong> ${reservation.category}`;  // Mostrar categoría
+
+          // 4) Enviar correo de cancelación
+          return fetch(`${apiBase}/sendCancellationEmail`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              reservationKey: key,
+              session_id: sessionId,
+              email: reservation.email,
+              date: reservation.date,
+              time: reservation.time,
+              firstName: reservation.firstName
             })
-            .then(res => res.json())
-            .then(session => {
-                const data = session.metadata;
-
-                if (!data) {
-                    document.body.innerHTML = "<h2>Error al recuperar los datos de la sesión.</h2>";
-                    return;
-                }
-
-                // Validar y asegurar que ningún campo sea undefined
-                const reservation = {
-                    service: data.service || "Servicio no especificado",
-                    price: data.price || "0",
-                    duration: data.duration || "No especificado",
-                    date: data.date || "Fecha no definida",
-                    time: data.time || "Hora no definida",
-                    firstName: data.firstName || "Nombre no proporcionado",
-                    lastName: data.lastName || "Apellido no proporcionado",
-                    email: session.customer_email || "Sin correo",
-                    phone: data.phone || "Sin teléfono"
-                };
-
-                console.log("Datos de la reserva:", reservation);
-
-                // Verificar si ya existe una reserva en la misma fecha y hora
-                firebase.database().ref("reservations").orderByChild("date").equalTo(reservation.date).once("value", snapshot => {
-                    let exists = false;
-
-                    snapshot.forEach(childSnapshot => {
-                        const existingReservation = childSnapshot.val();
-                        if (existingReservation.time === reservation.time) {
-                            exists = true;
-                        }
-                    });
-
-                    if (exists) {
-                        // Mostrar error si ya existe una reserva a la misma hora
-                        document.body.innerHTML = "<h2>Error: Ya existe una reserva para esta hora. Por favor, elige otro horario.</h2>";
-                    } else {
-                        // Si no existe, guardar la nueva reserva
-                        firebase.database().ref("reservations").push(reservation)
-                            .then(() => {
-                                document.body.innerHTML = `
-                                    <h2>¡Pago realizado con éxito!</h2>
-                                    <p>Gracias por tu reserva, ${reservation.firstName}.</p>
-                                    <p><strong>Servicio:</strong> ${reservation.service}</p>
-                                    <p><strong>Fecha:</strong> ${reservation.date}</p>
-                                    <p><strong>Hora:</strong> ${reservation.time}</p>
-                                `;
-                            })
-                            .catch(error => {
-                                console.error("Error al guardar en Firebase:", error);
-                                document.body.innerHTML = "<h2>Error al registrar tu reserva. Intenta más tarde.</h2>";
-                            });
-                    }
-                });
-            })
-            .catch(error => {
-                console.error("Error al obtener sesión de Stripe:", error);
-                document.body.innerHTML = "<h2>Error al confirmar el pago. Intenta más tarde.</h2>";
-            });
+          });
+        })
+        .then(response => {
+          if (!response.ok) console.warn("No se envió el correo de cancelación.");
+        })
+        .catch(err => {
+          console.error(err);
+          statusEl.textContent = "Error al procesar tu reserva. Intenta más tarde.";
         });
-    </script>
+    });
+  </script>
 </body>
 </html>

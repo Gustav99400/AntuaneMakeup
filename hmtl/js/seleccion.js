@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     };
                     
                     localStorage.setItem("selectedService", JSON.stringify(selectedService));
-                    window.location.href = "/hmtl/reserva.html"; 
+                    window.location.href = "reserva.html"; 
                 });
             });
         }, 100);

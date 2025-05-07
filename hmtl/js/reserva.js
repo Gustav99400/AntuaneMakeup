@@ -54,27 +54,22 @@ function showToast(message, type = "info") {
         selectedDuration.textContent = `Duración: ${selectedServiceData.duration}`;
     }
 
-    // Función para cargar las horas reservadas desde Firebase en tiempo real
-    // Función para cargar las horas reservadas desde Firebase en tiempo real
 function loadReservedHours(callback) {
     database.ref("reservations").on("value", (snapshot) => {
         let reservedHours = {};
 
         snapshot.forEach(userSnapshot => {
-            // Cada 'userSnapshot' tiene un id único y su información
-            const reservation = userSnapshot.val(); // Es el objeto completo de la reserva
+            const reservation = userSnapshot.val();
 
-            // Asegúrate de acceder correctamente a la fecha y la hora
-            const dateKey = reservation.date; // La fecha de la reserva
-            const reservedTime = reservation.time; // La hora de la reserva
+            const dateKey = reservation.date;
+            const reservedTime = reservation.time; 
 
-            // Verifica que dateKey y reservedTime existan
             if (dateKey && reservedTime) {
                 if (!reservedHours[dateKey]) {
                     reservedHours[dateKey] = [];
                 }
 
-                reservedHours[dateKey].push(reservedTime); // Agrega la hora reservada para esa fecha
+                reservedHours[dateKey].push(reservedTime);
             }
         });
 
@@ -198,9 +193,11 @@ function actualizarHorasOcupadas(snapshot) {
         resumen.innerHTML = `
             <p><strong>Fecha:</strong> ${formattedDate}</p>
             <p><strong>Hora:</strong> ${selectedTime}</p>
+            <p><strong>Categoría:</strong> ${selectedServiceData.category}</p>
             <p><strong>Servicio:</strong> ${selectedServiceData.name}</p>
             <p><strong>Precio:</strong> ${selectedServiceData.price}</p>
             <p><strong>Duración:</strong> ${selectedServiceData.duration}</p>
+            
         `;
 
         popup.style.display = "block";
@@ -234,59 +231,66 @@ function actualizarHorasOcupadas(snapshot) {
     }
 
     payButton.addEventListener("click", function () {
-        const email = emailInput.value;
-        const firstName = firstNameInput.value;
-        const lastName = lastNameInput.value;
-        const phone = phoneInput.value;
-        const selectedDateTime = JSON.parse(localStorage.getItem("selectedDateTime"));
-    
+        // 1. Validaciones
         const missingField = validateFormFields();
         if (missingField) {
-            alert(`Por favor, complete el campo: ${missingField}`);
-            return;
+          alert(`Por favor, complete el campo: ${missingField}`);
+          return;
         }
-    
-        if (!selectedDateTime || !selectedDateTime.date || !selectedDateTime.time) {
-            alert("Por favor, seleccione una fecha y hora.");
-            return;
+        const selectedDateTime = JSON.parse(localStorage.getItem("selectedDateTime"));
+        if (!selectedDateTime?.date || !selectedDateTime?.time) {
+          alert("Por favor, seleccione una fecha y hora.");
+          return;
         }
-    
+      
+        // 2. Construir objeto reserva
         const reserva = {
-            service: selectedServiceData.name,
-            price: selectedServiceData.price.replace(/[^\d]/g, ''),
-            duration: selectedServiceData.duration,
-            date: selectedDateTime.date,
-            time: selectedDateTime.time,
-            firstName,
-            lastName,
-            phone,
-            email
+          service: selectedServiceData.name,
+          price: selectedServiceData.price.replace(/[^\d.]/g, ""),
+          duration: selectedServiceData.duration,   
+          category: selectedServiceData.category || "Sin Categoría",
+          date: selectedDateTime.date,
+          time: selectedDateTime.time,
+          firstName: firstNameInput.value.trim(),
+          lastName:  lastNameInput.value.trim(),
+          phone:     phoneInput.value.trim(),
+          email:     emailInput.value.trim()
         };
-    
-        if (!confirmarReserva(reserva)) {
-            showToast("Reserva cancelada.", "info");
-            return;
-        }
-    
-        fetch("http://localhost:3000/create-checkout-session", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(reserva),
+        console.log(selectedServiceData.category);
+      
+        // 3. Mostrar popup de “Revisa tu correo”
+        popup.querySelector(".popup-content").innerHTML = `
+          <h3>¡Reserva Registrada!</h3>
+          <p>Para completar tu reserva debes confirmarla desde el correo que te hemos enviado.</p>
+          <button id="closePopup">Cerrar</button>
+        `;
+        popup.style.display = "block";
+        document.getElementById("closePopup").addEventListener("click", () => {
+          popup.style.display = "none";
+        });
+      
+        // 4. Solo enviar correo de confirmación
+        fetch("https://us-central1-antuanemakeup-7950c.cloudfunctions.net/api/sendConfirmationEmail", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(reserva),
         })
-            .then(res => res.json())
-            .then(data => {
-                if (data.url) {
-                    showToast("Redirigiendo a Stripe...", "success");
-                    window.location.href = data.url;
-                } else {
-                    alert("No se pudo crear la sesión de pago.");
-                }
-            })
-            .catch(error => {
-                console.error("Error al conectarse con Stripe:", error);
-                showToast("No se pudo conectar con Stripe. Intente nuevamente.", "error");
-            });
-    });
+        .then(res => res.json())
+        .then(data => {
+          if (data.success) {
+            showToast("Correo de confirmación enviado. Revisa tu bandeja de entrada.", "success");
+          } else {
+            showToast("Error al enviar correo de confirmación.", "error");
+          }
+        })
+        .catch(() => {
+          showToast("No se pudo enviar el correo. Intenta nuevamente.", "error");
+        });
+      });
+      
+    
+    
+      
     
     // Cierre del popup por botón, escape o clic fuera
     closePopup.addEventListener("click", function () {

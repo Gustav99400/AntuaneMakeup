@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "antuanemakeup-7950c"
-  }
+    "default": "antuanemakeup-7950c",
+    "pro": "antuanemakeup-7950c"
+  },
+  "targets": {},
+  "etags": {}
 }
