@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return options[category].map(opt => `
             <div class="option">
                 <img src="${opt.img}" alt="${opt.name}" style="width:80px; height:auto;">
-                <div class="option-info">a
+                <div class="option-info">
                     <h3>${opt.name}</h3>
                     <p>${opt.desc}</p>
                     <p><strong>Precio:</strong> ${opt.price}</p>
@@ -201,7 +201,8 @@ style.innerHTML = `
         display: none;
         flex-direction: column;
         align-items: center;
-        height: 900px;
+        height: 600px;
+        width: 600px;
         border-radius: 8px;
         z-index: 20;
         overflow-y: auto; /* Permite el desplazamiento */
@@ -210,8 +211,8 @@ style.innerHTML = `
         width: 100%;
         text-align: center;
     }
-    .options-container {
-        max-height: 300px; /* Limita la altura y permite desplazamiento interno */
+    .options-container {        
+        max-height: 400px;
         overflow-y: auto;
         width: 100%;
         padding-right: 10px;

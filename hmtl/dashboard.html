@@ -62,6 +62,18 @@
     .hidden {
       display: none;
     }
+    button#clearFilters {
+      padding: 6px 10px;
+      background-color: #888;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    button#clearFilters:hover {
+      background-color: #666;
+    }
+
   </style>
 </head>
 <body>
@@ -90,23 +102,24 @@
           <option value="Paquetes">Paquetes</option>
         </select>
         <input type="date" id="dateFilter">
+        <button id="clearFilters">Limpiar filtros</button>
       </div>
 
       <table id="reservations-table">
         <thead>
           <tr>
-            <th>Nombre</th>
-            <th>Email</th>
-            <th>Teléfono</th>
-            <th>Servicio</th>
-            <th>Fecha</th>
-            <th>Hora</th>
-            <th>Precio</th>
-            <th>Categoría</th>
-            <th>Estado</th>
-
+            <th data-sort="name">Nombre</th>
+            <th data-sort="email">Email</th>
+            <th data-sort="phone">Teléfono</th>
+            <th data-sort="service">Servicio</th>
+            <th data-sort="date">Fecha</th>
+            <th data-sort="time">Hora</th>
+            <th data-sort="price">Precio</th>
+            <th data-sort="category">Categoría</th>
+            <th data-sort="status">Estado</th>
           </tr>
         </thead>
+        
         <tbody></tbody>
       </table>
     </section>
@@ -298,6 +311,44 @@
   });
   return statusMap;
 }
+
+let currentSortField = null;
+let currentSortDirection = "asc";
+
+document.querySelectorAll("#reservations-table th[data-sort]").forEach(th => {
+  th.addEventListener("click", () => {
+    const sortField = th.getAttribute("data-sort");
+
+    if (currentSortField === sortField) {
+      currentSortDirection = currentSortDirection === "asc" ? "desc" : "asc";
+    } else {
+      currentSortField = sortField;
+      currentSortDirection = "asc";
+    }
+
+    const sorted = [...allReservations].sort((a, b) => {
+      let valA = a[sortField];
+      let valB = b[sortField];
+
+      // Para nombres, combinamos firstName + lastName
+      if (sortField === "name") {
+        valA = `${a.firstName} ${a.lastName}`.toLowerCase();
+        valB = `${b.firstName} ${b.lastName}`.toLowerCase();
+      }
+
+      if (!isNaN(valA) && !isNaN(valB)) {
+        valA = parseFloat(valA);
+        valB = parseFloat(valB);
+      }
+
+      if (valA < valB) return currentSortDirection === "asc" ? -1 : 1;
+      if (valA > valB) return currentSortDirection === "asc" ? 1 : -1;
+      return 0;
+    });
+
+    renderReservationsTable(sorted);
+  });
+});
 
 
 

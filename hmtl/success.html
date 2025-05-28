@@ -23,7 +23,7 @@
         return;
       }
 
-      // 1) Recuperar datos de sesión desde backend
+      // Paso 1: Recuperar datos de sesión desde el backend
       fetch(`${apiBase}/getSession?session_id=${sessionId}`)
         .then(res => {
           if (!res.ok) throw new Error("Error al recuperar datos de la sesión.");
@@ -41,23 +41,39 @@
             lastName:  m.lastName  || "",
             email:     session.customer_email || "",
             phone:     m.phone     || "",
-            category:  m.category  || ""  // Incluir categoría en la reserva
+            category:  m.category  || ""
           };
 
-          // 2) Guardar reserva en Firebase
-          return firebase.database().ref("reservations").push(reservation)
-            .then(ref => ({ reservation, key: ref.key }));
+          const dateTimeKey = `${reservation.date}_${reservation.time}`;
+          const indexRef = firebase.database().ref(`reservationsByDateTime/${dateTimeKey}`);
+
+          // Bloqueo atómico temporal
+          return indexRef.transaction(current => {
+            if (current === null) {
+              return true;
+            }
+            return; // Ya existe, evita la reserva
+          }).then(result => {
+            if (!result.committed) {
+              throw new Error("Ya existe una reserva para esta fecha y hora.");
+            }
+
+            // Guardar la reserva y luego eliminar el bloqueo
+            return firebase.database().ref("reservations").push(reservation)
+              .then(ref => {
+                return indexRef.remove().then(() => ({ reservation, key: ref.key }));
+              });
+          });
         })
         .then(({ reservation, key }) => {
-          // 3) Mostrar mensaje de éxito, incluyendo la categoría
+          // Mostrar mensaje de éxito
           statusEl.innerHTML = `¡Pago exitoso!<br>
             Reserva confirmada para <strong>${reservation.firstName} ${reservation.lastName}</strong>.<br>
             <strong>Servicio:</strong> ${reservation.service}<br>
             <strong>Fecha:</strong> ${reservation.date}<br>
             <strong>Hora:</strong> ${reservation.time}<br>
-            <strong>Categoría:</strong> ${reservation.category}`;  // Mostrar categoría
+            <strong>Categoría:</strong> ${reservation.category}`;
 
-          // 4) Enviar correo de cancelación
           return fetch(`${apiBase}/sendCancellationEmail`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -76,7 +92,11 @@
         })
         .catch(err => {
           console.error(err);
-          statusEl.textContent = "Error al procesar tu reserva. Intenta más tarde.";
+          if (err.message.includes("Ya existe una reserva")) {
+            statusEl.textContent = "Esa hora ya está reservada. Por favor, elige otra.";
+          } else {
+            statusEl.textContent = "Error al procesar tu reserva. Intenta más tarde.";
+          }
         });
     });
   </script>

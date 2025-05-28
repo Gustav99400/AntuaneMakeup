@@ -224,7 +224,7 @@ app.post("/sendCancellationEmail", async (req, res) => {
 
 /**
  * 6) GET /cancelReservation
- *    Valida token, comprueba ventana de 12h, realiza refund, elimina reserva
+ *    
  */
 app.get("/cancelReservation", async (req, res) => {
   try {
